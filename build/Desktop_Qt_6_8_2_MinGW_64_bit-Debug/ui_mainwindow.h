@@ -40,7 +40,7 @@ public:
     QLineEdit *passedit;
     QHBoxLayout *horizontalLayout;
     QPushButton *okbutton;
-    QPushButton *exit_button;
+    QPushButton *exitbutton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,13 +48,15 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(573, 433);
+        MainWindow->resize(535, 409);
         MainWindow->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(156, 161, 255);\n"
+"font-family: Arial, sans-serif;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         gridLayoutWidget = new QWidget(centralwidget);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(20, 20, 531, 361));
+        gridLayoutWidget->setGeometry(QRect(0, 0, 531, 361));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -65,26 +67,45 @@ public:
         nameofprogram = new QLabel(gridLayoutWidget);
         nameofprogram->setObjectName("nameofprogram");
         QFont font;
-        font.setPointSize(20);
+        font.setFamilies({QString::fromUtf8("Arial")});
+        font.setBold(true);
         nameofprogram->setFont(font);
+        nameofprogram->setStyleSheet(QString::fromUtf8("font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    color: #333;"));
 
         verticalLayout->addWidget(nameofprogram);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(50);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(10, 10, 10, 10);
+        horizontalLayout_2->setContentsMargins(10, 10, 30, 10);
         username = new QLabel(gridLayoutWidget);
         username->setObjectName("username");
-        QFont font1;
-        font1.setPointSize(15);
-        username->setFont(font1);
+        username->setFont(font);
+        username->setStyleSheet(QString::fromUtf8("font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    color: #333;"));
 
         horizontalLayout_2->addWidget(username);
 
         useredit = new QLineEdit(gridLayoutWidget);
         useredit->setObjectName("useredit");
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Arial")});
         useredit->setFont(font1);
+        useredit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	color: black;\n"
+"    border: 2px solid #aaa;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"    font-size: 14px;\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-color: #0078D7; /* Blue border on focus */\n"
+"}"));
 
         horizontalLayout_2->addWidget(useredit);
 
@@ -94,16 +115,31 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(50);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setContentsMargins(10, 10, 10, 10);
+        horizontalLayout_3->setContentsMargins(10, 10, 30, 10);
         password = new QLabel(gridLayoutWidget);
         password->setObjectName("password");
-        password->setFont(font1);
+        password->setFont(font);
+        password->setStyleSheet(QString::fromUtf8("font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    color: #333;"));
 
         horizontalLayout_3->addWidget(password);
 
         passedit = new QLineEdit(gridLayoutWidget);
         passedit->setObjectName("passedit");
         passedit->setFont(font1);
+        passedit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	color: black;\n"
+"    border: 2px solid #aaa;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px;\n"
+"    font-size: 14px;\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-color: #0078D7; /* Blue border on focus */\n"
+"}"));
 
         horizontalLayout_3->addWidget(passedit);
 
@@ -113,18 +149,50 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(60);
         horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(70, -1, 70, -1);
+        horizontalLayout->setContentsMargins(100, -1, 100, -1);
         okbutton = new QPushButton(gridLayoutWidget);
         okbutton->setObjectName("okbutton");
         okbutton->setFont(font1);
+        okbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #0078D7;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 8px;\n"
+"    font-size: 14px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #005a9e;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #003f7f;\n"
+"}"));
 
         horizontalLayout->addWidget(okbutton);
 
-        exit_button = new QPushButton(gridLayoutWidget);
-        exit_button->setObjectName("exit_button");
-        exit_button->setFont(font1);
+        exitbutton = new QPushButton(gridLayoutWidget);
+        exitbutton->setObjectName("exitbutton");
+        exitbutton->setFont(font1);
+        exitbutton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #0078D7;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 8px;\n"
+"    font-size: 14px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #005a9e;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #003f7f;\n"
+"}"));
 
-        horizontalLayout->addWidget(exit_button);
+        horizontalLayout->addWidget(exitbutton);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -135,7 +203,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 573, 25));
+        menubar->setGeometry(QRect(0, 0, 535, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -149,11 +217,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        nameofprogram->setText(QCoreApplication::translate("MainWindow", "Login Management System", nullptr));
-        username->setText(QCoreApplication::translate("MainWindow", "User Name:", nullptr));
+        nameofprogram->setText(QCoreApplication::translate("MainWindow", " Login Management System", nullptr));
+        username->setText(QCoreApplication::translate("MainWindow", "User Name: ", nullptr));
         password->setText(QCoreApplication::translate("MainWindow", "Password:   ", nullptr));
         okbutton->setText(QCoreApplication::translate("MainWindow", "OK", nullptr));
-        exit_button->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        exitbutton->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
     } // retranslateUi
 
 };

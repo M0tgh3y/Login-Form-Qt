@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
-    <height>433</height>
+    <width>535</width>
+    <height>409</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,12 +16,16 @@
   <property name="layoutDirection">
    <enum>Qt::LayoutDirection::LeftToRight</enum>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(156, 161, 255);
+font-family: Arial, sans-serif;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>0</x>
+      <y>0</y>
       <width>531</width>
       <height>361</height>
      </rect>
@@ -48,16 +52,23 @@
         <widget class="QLabel" name="nameofprogram">
          <property name="font">
           <font>
-           <pointsize>20</pointsize>
+           <family>Arial</family>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 20px;
+    font-weight: bold;
+    color: #333;</string>
+         </property>
          <property name="text">
-          <string>Login Management System</string>
+          <string> Login Management System</string>
          </property>
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
          <property name="spacing">
           <number>50</number>
          </property>
@@ -68,7 +79,7 @@
           <number>10</number>
          </property>
          <property name="rightMargin">
-          <number>10</number>
+          <number>30</number>
          </property>
          <property name="bottomMargin">
           <number>10</number>
@@ -77,11 +88,18 @@
           <widget class="QLabel" name="username">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 20px;
+    font-weight: bold;
+    color: #333;</string>
+           </property>
            <property name="text">
-            <string>User Name:</string>
+            <string>User Name: </string>
            </property>
           </widget>
          </item>
@@ -89,8 +107,23 @@
           <widget class="QLineEdit" name="useredit">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	color: black;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+QLineEdit:focus {
+    border-color: #0078D7; /* Blue border on focus */
+}</string>
            </property>
           </widget>
          </item>
@@ -108,7 +141,7 @@
           <number>10</number>
          </property>
          <property name="rightMargin">
-          <number>10</number>
+          <number>30</number>
          </property>
          <property name="bottomMargin">
           <number>10</number>
@@ -117,8 +150,15 @@
           <widget class="QLabel" name="password">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 20px;
+    font-weight: bold;
+    color: #333;</string>
            </property>
            <property name="text">
             <string>Password:   </string>
@@ -129,8 +169,23 @@
           <widget class="QLineEdit" name="passedit">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	color: black;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+QLineEdit:focus {
+    border-color: #0078D7; /* Blue border on focus */
+}</string>
            </property>
           </widget>
          </item>
@@ -142,17 +197,36 @@
           <number>60</number>
          </property>
          <property name="leftMargin">
-          <number>70</number>
+          <number>100</number>
          </property>
          <property name="rightMargin">
-          <number>70</number>
+          <number>100</number>
          </property>
          <item>
           <widget class="QPushButton" name="okbutton">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #005a9e;
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+}</string>
            </property>
            <property name="text">
             <string>OK</string>
@@ -160,11 +234,30 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="exit_button">
+          <widget class="QPushButton" name="exitbutton">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <family>Arial</family>
+             <pointsize>-1</pointsize>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #005a9e;
+}
+
+QPushButton:pressed {
+    background-color: #003f7f;
+}</string>
            </property>
            <property name="text">
             <string>Exit</string>
@@ -183,8 +276,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>573</width>
-     <height>25</height>
+     <width>535</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -1,13 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QIcon>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    setWindowTitle("Login Form");
+    setWindowIcon(QIcon("C:/Users/Ariyana-Soft/Downloads/icons8-login-50.png"));
+
     connect(ui->okbutton, SIGNAL(clicked()), this, SLOT(ok_button()));
+    connect(ui->exitbutton, &QPushButton::clicked, this, &QMainWindow::close);
 }
 
 MainWindow::~MainWindow()
